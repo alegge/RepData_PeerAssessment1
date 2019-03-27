@@ -1,0 +1,25 @@
+---
+title: 'Reproducible Research: Project 1'
+author: "Alison Legge"
+date: '2019-03-27'
+output: html_document
+---
+
+## Loading and preprocessing the data
+1. Load the data (i.e. read.csv())
+```{r, warning = FALSE, message = FALSE}
+library(ggplot2)
+activity_df <- read.csv('activity.csv')
+```
+
+2. Process/transform the data (if necessary) into a format suitable for your analysis
+
+
+## What is mean total number of steps taken per day?
+1. Make a histogram of the total number of steps taken each day
+```{r}
+daily_steps <- aggregate(steps ~ date, activity_df, sum, na.rm = TRUE)
+```
+
+2. Calculate and report the mean and median total number of steps taken per day
+
